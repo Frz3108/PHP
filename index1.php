@@ -1,7 +1,8 @@
 <?php include "/var/www/inc/dbinfo.inc"; ?>
 <html>
 <body>
-<h1>Data Server 2</h1>
+  <tittle>Data Server 1</tittle>
+<h1>Data Server 1</h1>
 <?php
 
   /* Connect to MySQL and select the database. */
