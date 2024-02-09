@@ -1,0 +1,15 @@
+Script Untuk AWS EFS
+
+sudo yum install -y amazon-efs-utils
+
+mkdir DataFile
+
+copy attach di efs mount via dns atas
+
+df -h
+
+cd DataFile
+
+sudo nano data.txt
+
+isi Hello World 
