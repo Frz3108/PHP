@@ -1,0 +1,55 @@
+Script Untuk Server 2 ( Amazon Linux 2 AMI )
+
+
+sudo yum update -y
+
+sudo amazon-linux-extras | grep php
+
+sudo amazon-linux-extras enable php8.1
+
+sudo yum install httpd -y
+
+sudo systemctl enable httpd -y
+
+sudo systemctl start httpd -y
+
+sudo yum install telnet -y
+
+telnet (endpoint RDS)
+
+sudo yum install mysql -y
+
+mysql -h(endpoint) -uadmin -p
+
+show databases;
+
+exit
+
+sudo usermod -a -G apache ec2-user
+
+exit
+
+groups ( output= ec2-user adm wheel apache systemd-journal )
+
+sudo chmod 2775 /var/www
+find /var/www -type d -exec sudo chmod 2775 {} \;
+
+find /var/www -type f -exec sudo chmod 0664 {} \;
+
+cd /var/www
+
+mkdir inc
+
+cd /var/www/inc
+
+nano dbinfo.inc ( masukkan coding koneksi.php di https://github.com/Frz3108/PHP/blob/7b7d75553d01856ab93895e15cabf4269233b90d/koneksi.php ) CTRL + X , Y , ENTER
+
+cd
+
+cd /var/www/html
+
+nano index.php ( masukkan coding index.php di https://github.com/Frz3108/PHP/blob/7b7d75553d01856ab93895e15cabf4269233b90d/index2.php ) CTRL + X , Y , ENTER
+
+cek web
+
+SELESAI
