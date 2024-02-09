@@ -1,7 +1,6 @@
 <?php include "/var/www/inc/dbinfo.inc"; ?>
 <html>
 <body>
-  <tittle>Data Server 1</tittle>
 <h1>Data Server 1</h1>
 <?php
 
